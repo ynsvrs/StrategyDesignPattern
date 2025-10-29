@@ -1,15 +1,16 @@
 package context;
+
 import model.Photo;
-import strategy.SortingStrategy;
+import strategy.IPhotoSortStrategy;
 
 public class Gallery {
-    private SortingStrategy sortingStrategy;
+    private IPhotoSortStrategy sortingStrategy;
 
-    public Gallery(SortingStrategy sortingStrategy) {
+    public Gallery(IPhotoSortStrategy sortingStrategy) {
         this.sortingStrategy = sortingStrategy;
     }
 
-    public void setSortingStrategy(SortingStrategy sortingStrategy) {
+    public void setSortingStrategy(IPhotoSortStrategy sortingStrategy) {
         this.sortingStrategy = sortingStrategy;
     }
 
@@ -17,4 +18,3 @@ public class Gallery {
         sortingStrategy.sort(photo1, photo2);
     }
 }
-
